@@ -20,7 +20,7 @@
 
 # define TRUE 1
 # define FALSE 0
-#define INT_MAX 0x7FFFFFFF
+# define INT_MAX 0x7FFFFFFF
 # define ERROR_MSG \
 	"Usage: number_of_philosophers time_to_die time_to_eat \
 time_to_sleep [number_of_times_each_philosopher_must_eat]\n"
