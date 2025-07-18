@@ -1,9 +1,19 @@
-SRC= $(wildcard *.c)
+SRC= app.c \
+	main.c \
+	monitor.c \
+	parse_args.c \
+	philo_routine.c \
+	philo.c \
+	state.c \
+	utils.c
+
 OBJ=$(SRC:.c=.o)
+
 NAME = philo
 CC = cc
-FLAGS = -Wall -Wextra -Werror -g -pthread
-${philo}: all
+FLAGS = -Wall -Wextra -Werror
+
+$(NAME): all
 
 all: $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
@@ -13,3 +23,7 @@ clean:
 
 fclean: clean
 	rm -rf $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
