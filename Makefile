@@ -13,9 +13,9 @@ NAME = philo
 CC = cc
 FLAGS = -Wall -Wextra -Werror
 
-$(NAME): all
+all: $(NAME)
 
-all: $(OBJ)
+$(NAME): $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 clean:
